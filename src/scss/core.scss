@@ -1,0 +1,105 @@
+/* --------------------
+   Basic Styles
+-------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.95vw;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  padding: 2rem;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  color: #333;
+}
+
+video, input, button {
+  outline: none;
+}
+
+h1 {
+  margin: 0px;
+  padding-top: 2%;
+  font-size: 25px;
+}
+
+/* --------------------
+   Content Styles
+-------------------- */
+
+.main-content {
+  height: -webkit-fill-available;
+  text-align: -webkit-center;
+  display: grid;
+}
+
+.action-btns {
+  display: flex;
+  justify-content: center;
+  input {
+    padding-top: 5px;
+  }
+  .playBtn, {
+    height: 30px;
+    width: 100px;
+    border-radius: 4px;
+    background: #000;
+    font-size: 13px;
+    color: #f8f8f8;
+    font-weight: 500;
+  }
+}
+
+.playpause {
+  background-image: url('https://findicons.com/files/icons/1763/milanioom/128/play.png');
+  background-repeat: no-repeat;
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: -11%;
+  bottom: 0%;
+  margin: auto;
+  background-size: contain;
+  background-position: center;
+}
+
+/* --------------------
+   Media Styles
+-------------------- */
+
+@media (min-width: 768px) {
+  .main-content {
+    box-shadow: 0 1px 10px rgba(170,170,170,0.15), 0 1px 10px rgba(170,170,170,0.15);
+  }
+
+  .videoplayer {
+    height: 500px;
+    width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoplayer {
+    height: 200px;
+    width: 250px;
+  }
+
+  .main-content {
+    margin-top: 30%;
+  }
+
+  .playpause {
+    width: 40px;
+    height: 40px;
+    top: -21%;
+    z-index: 10;
+  }
+}
